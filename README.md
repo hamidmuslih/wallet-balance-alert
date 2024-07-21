@@ -57,8 +57,12 @@ wallets:
     ```sh
     go build -o wallet-checker
     ```
-
-3. Run the application:
+3. Update the `sample-config.yaml` the application:
+    ```sh
+    cp sample-config.yaml config.yaml
+    nano config.yaml
+    ```
+4. Run the application:
     ```sh
     ./wallet-checker
     ```

@@ -1,0 +1,11 @@
+slackWebhook: "https://hooks.slack.com/services/your/slack/webhook"
+rpcUrl: "https://eth.llamarpc.com"
+explorerUrl: "https://etherscan.io/"
+intervalInSecs: 600
+wallets:
+  - name: "My-wallet-1"
+    address: "0xC2Ae2e17fE7A18CcA845bf59899C4eAAAAAAAAAA"
+    thresholdInEth: 1
+  - name: "My-wallet-2"
+    address: "0xC2Ae2e17fE7A18CcA845bf59899C4eBBBBBBBBBB"
+    thresholdInEth: 0.001
