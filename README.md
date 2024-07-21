@@ -20,16 +20,16 @@ Create a `config.yaml` file with the following structure:
 
 ```yaml
 slackWebhook: "https://hooks.slack.com/services/your/slack/webhook"
-rpcUrl: "https://your-ethereum-rpc-url"
-explorerUrl: "https://your-explorer-url"
+rpcUrl: "https://eth.llamarpc.com"
+explorerUrl: "https://etherscan.io/"
 intervalInSecs: 600
 wallets:
-  - name: "wallet1"
-    address: "0xYourWalletAddress1"
+  - name: "My-wallet-1"
+    address: "0xC2Ae2e17fE7A18CcA845bf59899C4eAAAAAAAAAA"
+    thresholdInEth: 1
+  - name: "My-wallet-2"
+    address: "0xC2Ae2e17fE7A18CcA845bf59899C4eBBBBBBBBBB"
     thresholdInEth: 0.001
-  - name: "wallet2"
-    address: "0xYourWalletAddress2"
-    thresholdInEth: 2
 ```
 
 ## Building and Running
@@ -40,8 +40,13 @@ wallets:
     ```sh
     docker build -t wallet-checker .
     ```
+2. Create and update the `config.yaml` file:
+    ```sh
+    cp sample-config.yaml config.yaml
+    nano config.yaml
+    ```
 
-2. Run the Docker container:
+3. Run the Docker container:
     ```sh
     docker run -d --name wallet-checker-container -v ./config.yaml:/app/config.yaml wallet-checker
     ```
@@ -57,7 +62,7 @@ wallets:
     ```sh
     go build -o wallet-checker
     ```
-3. Update the `sample-config.yaml` the application:
+3. Create and update the `config.yaml` file:
     ```sh
     cp sample-config.yaml config.yaml
     nano config.yaml
@@ -82,4 +87,4 @@ If a wallet’s balance falls below the defined threshold, an alert is sent to t
 Contributions are welcome! Please open an issue or submit a pull request.
 
 ## Contact
-For questions or support, please contact [hamidullah.Muslih@chainsafe.io].
+For questions or support, please contact [devops@chainsafe.io].

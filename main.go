@@ -46,7 +46,7 @@ func main() {
 
 	// Assign the Slack webhook URL to a variable
 	slackWebhookURL := config.SlackWebhook
-	logger.Println("Slack Webhook URL:", slackWebhookURL)
+	logger.Println("Slack Webhook URL: True")
 
 	// Log the interval in seconds
 	interval := time.Duration(config.IntervalInSecs) * time.Second
