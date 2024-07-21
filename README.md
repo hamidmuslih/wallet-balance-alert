@@ -34,7 +34,7 @@ wallets:
 
 ## Building and Running
 ### Using Docker
-
+**Note:** The pre-built Docker image can be found [here](https://hub.docker.com/repository/docker/chainsafeinfra/wallet-checker/general)
 1. Build the Docker image:
 
     ```sh
